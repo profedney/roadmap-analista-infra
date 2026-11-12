@@ -44,7 +44,7 @@ Ao longo deste roadmap, pretendo desenvolver conhecimentos em:
 
 - [x] [Aula 01 - Fundamentos de Infraestrutura](aula-01-fundamentos.md)
 - [x] [Aula 02 - Redes: IP, DNS e DHCP](aula-02-redes-na-pratica.md)
-- [x] Aula 03 - Active Directory
+- [x] [Aula 03 - Active Directory](aula-03-active-directory.md)
 - [ ] Aula 04 - Autenticação no Active Directory
 - [ ] Aula 05 - DNS na Prática
 - [ ] Aula 06 - DHCP na Prática

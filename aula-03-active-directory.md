@@ -36,13 +36,13 @@ Em vez de administrar cada computador individualmente, o administrador realiza o
 
 Imagine uma empresa com 500 colaboradores.
 
-Sem Active Directory:
+### Sem Active Directory
 
 - Cada computador teria usuários locais.
 - As senhas seriam administradas individualmente.
 - O controle de permissões seria complexo.
 
-Com Active Directory:
+### Com Active Directory
 
 ✅ Um único usuário pode acessar diversos recursos.
 
@@ -56,16 +56,16 @@ Com Active Directory:
 
 Um domínio é uma estrutura lógica que centraliza a autenticação dos usuários.
 
-Exemplos:
+### Exemplos
 
 ```text
-EMPRESA\edney
+EMPRESA\usuario
 ```
 
 ou
 
 ```text
-edney@empresa.com
+usuario@empresa.com
 ```
 
 Ao realizar login no computador corporativo, o usuário normalmente está autenticando contra o domínio da empresa.
@@ -75,15 +75,15 @@ Ao realizar login no computador corporativo, o usuário normalmente está autent
 # Fluxo Simplificado de Autenticação
 
 ```text
-Usuário
+usuario
     ↓
-Computador
+computador
     ↓
 Active Directory
     ↓
-Validação da Senha
+validação da senha
     ↓
-Acesso Concedido
+acesso concedido
 ```
 
 Se a senha estiver correta e a conta estiver habilitada, o acesso será permitido.
@@ -103,7 +103,7 @@ As OUs servem para organizar objetos dentro do Active Directory.
 ## Exemplo de Estrutura
 
 ```text
-MODULAR
+EMPRESA
 │
 ├── TI
 ├── RH
@@ -142,7 +142,7 @@ Ao invés de conceder acesso individualmente:
 Criamos um grupo:
 
 ```text
-FINANCEIRO_LEITURA
+GRP_FINANCEIRO_LEITURA
 ```
 
 E adicionamos os usuários a ele.
@@ -181,7 +181,7 @@ GPO significa:
 
 # Exemplo Prático de GPO
 
-Usuário faz login.
+O usuário faz login.
 
 Automaticamente:
 
@@ -204,7 +204,7 @@ Fluxo comum:
 ```text
 Active Directory Local
           ↓
-Microsoft Entra Connect
+Microsoft Entra Connect Sync
           ↓
 Microsoft Entra ID
           ↓
@@ -213,24 +213,24 @@ Microsoft 365
 
 ---
 
-# Exemplo Real
+# Exemplo Prático
 
-Situação:
+### Situação
 
 ```text
-Usuário criado no Active Directory.
+Conta criada no Active Directory.
 ```
 
 Após algumas horas:
 
 ```text
-Usuário não aparece no Microsoft 365.
+O usuário não aparece no Microsoft 365.
 ```
 
-Possíveis causas:
+### Possíveis causas
 
 - Falha de sincronização.
-- Serviço Entra Connect parado.
+- Serviço Entra Connect Sync parado.
 - Erro de configuração.
 - Problema de provisionamento.
 
@@ -239,7 +239,7 @@ Possíveis causas:
 # Objetos Mais Comuns do Active Directory
 
 | Objeto | Função |
-|----------|----------|
+|---------|---------|
 | Usuário | Representa uma pessoa |
 | Computador | Representa uma estação ou servidor |
 | Grupo | Centraliza permissões |
@@ -253,45 +253,45 @@ Possíveis causas:
 
 ## Redefinir Senha
 
-Chamado:
+### Chamado
 
 ```text
 Esqueci minha senha.
 ```
 
-Ação:
+### Ação
 
 ```text
-Reset de senha no Active Directory.
+Redefinir senha no Active Directory.
 ```
 
 ---
 
 ## Desbloquear Usuário
 
-Chamado:
+### Chamado
 
 ```text
 Minha conta está bloqueada.
 ```
 
-Ação:
+### Ação
 
 ```text
-Unlock Account.
+Desbloquear conta no Active Directory.
 ```
 
 ---
 
 ## Adicionar Acesso
 
-Chamado:
+### Chamado
 
 ```text
-Usuário precisa acessar pasta Financeiro.
+Usuário precisa acessar a pasta Financeiro.
 ```
 
-Ação:
+### Ação
 
 ```text
 Adicionar usuário ao grupo adequado.
@@ -301,16 +301,16 @@ Adicionar usuário ao grupo adequado.
 
 ## Verificar Sincronização
 
-Chamado:
+### Chamado
 
 ```text
 Usuário criado no AD não aparece no Microsoft 365.
 ```
 
-Ação:
+### Ação
 
 ```text
-Verificar sincronização do Entra Connect.
+Verificar sincronização do Entra Connect Sync.
 ```
 
 ---
@@ -335,7 +335,7 @@ Você criou um usuário no Active Directory.
 Após duas horas:
 
 ```text
-O login Windows funciona.
+O login no Windows funciona.
 O usuário não aparece no Microsoft 365.
 ```
 
@@ -345,7 +345,7 @@ A) Monitor
 
 B) Impressora
 
-C) Entra Connect / Sincronização
+C) Entra Connect Sync / Sincronização
 
 D) Memória RAM
 
@@ -383,7 +383,7 @@ D) Uma licença Microsoft
 
 ## Questão 3
 
-Qual a principal vantagem dos grupos?
+Qual é a principal vantagem dos grupos?
 
 A) Organizar permissões de forma centralizada
 
@@ -411,14 +411,7 @@ D) Um endereço IP
 
 ## Questão 5
 
-Cite uma situação comum de suporte que envolva:
-
-- Active Directory
-- Grupo
-- GPO
-- Sincronização Microsoft 365
-
-Explique como o problema pode estar relacionado a um desses componentes.
+Cite uma situação comum de suporte envolvendo Active Directory, grupos, GPO ou sincronização Microsoft 365 e explique como você realizaria a investigação inicial.
 
 ---
 
@@ -434,7 +427,7 @@ EP.C
 
 4.B
 
-5.Resposta discursiva
+5.Resposta discursiva (AD, Grupo, GPO ou Sincronização M365)
 
 ---
 

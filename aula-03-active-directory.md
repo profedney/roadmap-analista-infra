@@ -59,13 +59,13 @@ Um domínio é uma estrutura lógica que centraliza a autenticação dos usuári
 Exemplos:
 
 ```text
-MODULAR\edney
+EMPRESA\edney
 ```
 
 ou
 
 ```text
-edney@modulardtc.com
+edney@empresa.com
 ```
 
 Ao realizar login no computador corporativo, o usuário normalmente está autenticando contra o domínio da empresa.
